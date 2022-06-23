@@ -79,9 +79,10 @@ class CarDetailViewController: UIViewController {
         
         if let dicOverview = dic.value(forKey: "Overview") as? NSDictionary {
             if let arrPhotos = dicOverview.value(forKey: "Photos") as? NSArray  {
-                otlImagesHeight.constant = getImagesHeight()
+                let scrollViewFrameHeight = getImagesHeight()
+                otlImagesHeight.constant = scrollViewFrameHeight
                 
-                let scrollViewFrame = CGRect(x: 0,y: 0, width: otlImages.contentView.frame.size.width, height: getImagesHeight())
+                let scrollViewFrame = CGRect(x: 0,y: 0, width: otlImages.contentView.frame.size.width, height: scrollViewFrameHeight)
                 otlImages.configure(arrPhotos, scrollViewFrame)
             }
             else { handleError("Unable to read Photos.") }
@@ -108,11 +109,8 @@ class CarDetailViewController: UIViewController {
         switch UIDevice.current.userInterfaceIdiom {
             case .pad:
                 if UIDevice.current.orientation.isLandscape || 1366 <= self.view.frame.size.width {
-                    return 910
+                    return 750 //explicit set this one for because, its cove the whole screen, it can be fix but need more time and another approach.
                 }
-            
-                return 682
-            
             case .unspecified: break
             case .phone: break
             case .tv: break

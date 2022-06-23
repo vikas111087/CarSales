@@ -45,9 +45,19 @@ class CarsTableView: UIViewController {
         otlButton.addTarget(self, action: #selector(sortByName), for: .touchUpInside)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        reloadDataAdjustTableRowHightLoad()
+    }
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         
+        reloadDataAdjustTableRowHightLoad()
+    }
+    
+    private func reloadDataAdjustTableRowHightLoad() {
         m_appDelegate.mainThread.async {
             self.otlTableView.rowHeight = self.m_appDelegate.getRatioHeight(self.view.frame.size.width) + 80
             self.otlTableView.reloadData()

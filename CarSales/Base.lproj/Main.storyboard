@@ -121,7 +121,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-QS-JLN" customClass="CarsPhotoSliderView" customModule="CarSales" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-QS-JLN" customClass="CarsPhotoSliderView" customModule="CarSales" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="428" height="285"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -129,25 +129,25 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YLF-GE-28L">
-                                <rect key="frame" x="5" y="295" width="423" height="17"/>
+                                <rect key="frame" x="5" y="290" width="423" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OpT-DS-T0E">
-                                <rect key="frame" x="5" y="322" width="423" height="17"/>
+                                <rect key="frame" x="5" y="312" width="423" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="cJn-WP-B7i">
-                                <rect key="frame" x="5" y="349" width="423" height="17"/>
+                                <rect key="frame" x="5" y="334" width="423" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOU-bF-krx">
-                                <rect key="frame" x="5" y="401" width="423" height="437"/>
+                                <rect key="frame" x="5" y="381" width="423" height="457"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -155,7 +155,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sale Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tGa-9S-jwE">
-                                <rect key="frame" x="5" y="376" width="423" height="17"/>
+                                <rect key="frame" x="5" y="356" width="423" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -166,19 +166,19 @@
                         <constraints>
                             <constraint firstItem="EBx-tS-H0s" firstAttribute="trailing" secondItem="OpT-DS-T0E" secondAttribute="trailing" id="4qv-5y-dZP"/>
                             <constraint firstItem="cJn-WP-B7i" firstAttribute="leading" secondItem="EBx-tS-H0s" secondAttribute="leading" constant="5" id="8Oq-st-JhY"/>
-                            <constraint firstItem="tGa-9S-jwE" firstAttribute="top" secondItem="cJn-WP-B7i" secondAttribute="bottom" constant="10" id="Dfp-Ym-tfo"/>
+                            <constraint firstItem="tGa-9S-jwE" firstAttribute="top" secondItem="cJn-WP-B7i" secondAttribute="bottom" constant="5" id="Dfp-Ym-tfo"/>
                             <constraint firstItem="EBx-tS-H0s" firstAttribute="trailing" secondItem="cJn-WP-B7i" secondAttribute="trailing" id="EPK-pX-fMg"/>
                             <constraint firstItem="YLF-GE-28L" firstAttribute="leading" secondItem="EBx-tS-H0s" secondAttribute="leading" constant="5" id="Ixx-Oh-EGa"/>
                             <constraint firstItem="LZX-QS-JLN" firstAttribute="leading" secondItem="EBx-tS-H0s" secondAttribute="leading" id="JlN-EV-cPq"/>
-                            <constraint firstItem="cJn-WP-B7i" firstAttribute="top" secondItem="OpT-DS-T0E" secondAttribute="bottom" constant="10" id="MHN-2O-7uj"/>
+                            <constraint firstItem="cJn-WP-B7i" firstAttribute="top" secondItem="OpT-DS-T0E" secondAttribute="bottom" constant="5" id="MHN-2O-7uj"/>
                             <constraint firstItem="tGa-9S-jwE" firstAttribute="leading" secondItem="EBx-tS-H0s" secondAttribute="leading" constant="5" id="Mf5-hz-66H"/>
                             <constraint firstAttribute="trailing" secondItem="tGa-9S-jwE" secondAttribute="trailing" id="OfP-h0-qn7"/>
                             <constraint firstItem="EBx-tS-H0s" firstAttribute="trailing" secondItem="YLF-GE-28L" secondAttribute="trailing" id="Q8k-DJ-m6V"/>
                             <constraint firstAttribute="trailing" secondItem="gOU-bF-krx" secondAttribute="trailing" id="R7D-sI-aO2"/>
                             <constraint firstItem="LZX-QS-JLN" firstAttribute="top" secondItem="EBx-tS-H0s" secondAttribute="top" id="SeV-3J-JK3"/>
                             <constraint firstItem="gOU-bF-krx" firstAttribute="leading" secondItem="EBx-tS-H0s" secondAttribute="leading" constant="5" id="ZOO-gR-YJs"/>
-                            <constraint firstItem="YLF-GE-28L" firstAttribute="top" secondItem="LZX-QS-JLN" secondAttribute="bottom" constant="10" id="j3W-xd-Ftl"/>
-                            <constraint firstItem="OpT-DS-T0E" firstAttribute="top" secondItem="YLF-GE-28L" secondAttribute="bottom" constant="10" id="kpX-E5-Rrn"/>
+                            <constraint firstItem="YLF-GE-28L" firstAttribute="top" secondItem="LZX-QS-JLN" secondAttribute="bottom" constant="5" id="j3W-xd-Ftl"/>
+                            <constraint firstItem="OpT-DS-T0E" firstAttribute="top" secondItem="YLF-GE-28L" secondAttribute="bottom" constant="5" id="kpX-E5-Rrn"/>
                             <constraint firstItem="OpT-DS-T0E" firstAttribute="leading" secondItem="EBx-tS-H0s" secondAttribute="leading" constant="5" id="mfb-TZ-amR"/>
                             <constraint firstItem="gOU-bF-krx" firstAttribute="top" secondItem="tGa-9S-jwE" secondAttribute="bottom" constant="8" symbolic="YES" id="tT3-dH-wTL"/>
                             <constraint firstAttribute="bottom" secondItem="gOU-bF-krx" secondAttribute="bottom" id="ut8-lY-G9V"/>

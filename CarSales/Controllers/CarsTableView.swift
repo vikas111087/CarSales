@@ -185,53 +185,12 @@ extension CarsTableView: UITableViewDelegate, UITableViewDataSource {
         
         otlSearchBar.searchTextField.endEditing(true)
     }
-    
-    /*private func setTableViewRowHeight() {
-        switch UIDevice.current.userInterfaceIdiom {
-            case .pad:
-            if UIDevice.current.orientation.isLandscape || 1366 <= self.view.frame.size.width {
-                    otlTableView.rowHeight = 910 + 80 //getRatioHeight(self.view.frame.size.width) + 50
-                    return
-                }
-                
-                otlTableView.rowHeight = 682 + 80
-                return
-            
-            case .unspecified: break
-            case .phone: break
-            case .tv: break
-            case .carPlay: break
-            case .mac: break
-            @unknown default: break
-        }
-        
-        otlTableView.rowHeight = 370
-    }
-    
-    private func getThumbnailHeight() -> CGFloat {
-        switch UIDevice.current.userInterfaceIdiom {
-            case .pad:
-                if UIDevice.current.orientation.isLandscape || 1366 <= self.view.frame.size.width {
-                    return 910
-                }
-            
-                return 682
-            
-            case .unspecified: break
-            case .phone: break
-            case .tv: break
-            case .carPlay: break
-            case .mac: break
-            @unknown default: break
-        }
-        
-        return 283
-    }*/
 }
 
 extension CarsTableView: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {        
         m_searchedCar = m_appModel.getCarsName().filter { $0.lowercased().prefix(searchText.count) == searchText.lowercased() }
+        
         m_isSearching = true
         otlTableView.reloadData()
         

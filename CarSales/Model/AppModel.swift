@@ -110,13 +110,17 @@ class AppModel: NSObject {
     }
     
     func setCarsName(_ dic: NSDictionary) {
-        let carName   = dic.value(forKey: "Title") as! String
-        m_arrCarsName.add(carName)
+        if let title = dic.value(forKey: "Title") as? String {
+            let carYear = title.prefix(5)
+            let carName = title.replacingOccurrences(of: carYear, with: "")
+            m_arrCarsName.add(carName)
+        }
+        else { print("setCarsName : Unable to read Title.") }
     }
     
     func getCarsName() -> [String] {
-        let CarsNames : [String] = m_arrCarsName as! [String]
-        return CarsNames
+        let carsNames : [String] = m_arrCarsName as! [String]
+        return carsNames
     }
     
     func setSelectedCarObject(_ dicSelectedCar: NSDictionary) {
@@ -130,8 +134,10 @@ class AppModel: NSObject {
     func getCarDetailFromName(_ name: String) -> NSDictionary {
         for value in getCarsData() {
             if let dic = value as? NSDictionary {
-                if let savedName = dic.value(forKey: "Title") as? String {
-                    if(name == savedName) {
+                if let title = dic.value(forKey: "Title") as? String {
+                    let carYear = title.prefix(5)
+                    let carName = title.replacingOccurrences(of: carYear, with: "")
+                    if(name == carName) {
                         return dic
                     }
                 }

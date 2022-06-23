@@ -109,7 +109,8 @@ class CarDetailViewController: UIViewController {
         switch UIDevice.current.userInterfaceIdiom {
             case .pad:
                 if UIDevice.current.orientation.isLandscape || 1366 <= self.view.frame.size.width {
-                    return 750 //explicit set this one for because, its cove the whole screen, it can be fix but need more time and another approach.
+                    //explicit set this one to fit image otherwise its cove the whole screen, it can be fix but need more time and another approach.
+                    return 750
                 }
             case .unspecified: break
             case .phone: break
